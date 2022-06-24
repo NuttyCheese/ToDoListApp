@@ -19,8 +19,8 @@ class TaskListViewController: UITableViewController {
 
     private func setupView() {
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellID)
-        tableView.separatorColor = #colorLiteral(red: 0.100136213, green: 0.7078616619, blue: 0.02850572579, alpha: 1)
-        view.backgroundColor = .white
+        tableView.separatorColor = .greenCustom
+        view.backgroundColor = .snowCustom
         setupNavigationBar()
     }
     
@@ -30,9 +30,9 @@ class TaskListViewController: UITableViewController {
         
         let navBarAppearance = UINavigationBarAppearance()
         navBarAppearance.configureWithOpaqueBackground()
-        navBarAppearance.titleTextAttributes = [.foregroundColor: UIColor.white]
-        navBarAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
-        navBarAppearance.backgroundColor = #colorLiteral(red: 0.100136213, green: 0.7078616619, blue: 0.02850572579, alpha: 1)
+        navBarAppearance.titleTextAttributes = [.foregroundColor: UIColor.snowCustom]
+        navBarAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor.snowCustom]
+        navBarAppearance.backgroundColor = .greenCustom
         navigationController?.navigationBar.standardAppearance = navBarAppearance
         navigationController?.navigationBar.scrollEdgeAppearance = navBarAppearance
         
@@ -42,7 +42,7 @@ class TaskListViewController: UITableViewController {
             action: #selector(addNewTask)
         )
         
-        navigationController?.navigationBar.tintColor = .white
+        navigationController?.navigationBar.tintColor = .snowCustom
     }
     
     @objc private func addNewTask() {
