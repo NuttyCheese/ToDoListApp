@@ -28,7 +28,6 @@ class TaskListViewController: UITableViewController {
         title = "Task List"
         navigationController?.navigationBar.prefersLargeTitles = true
         
-        // Navigation bar appearance
         let navBarAppearance = UINavigationBarAppearance()
         navBarAppearance.configureWithOpaqueBackground()
         navBarAppearance.titleTextAttributes = [.foregroundColor: UIColor.white]
@@ -37,7 +36,6 @@ class TaskListViewController: UITableViewController {
         navigationController?.navigationBar.standardAppearance = navBarAppearance
         navigationController?.navigationBar.scrollEdgeAppearance = navBarAppearance
         
-        // Add button to navigation bar
         navigationItem.rightBarButtonItem = UIBarButtonItem(
             barButtonSystemItem: .add,
             target: self,
@@ -91,7 +89,6 @@ extension TaskListViewController {
 
 // MARK: - UITableViewDelegate
 extension TaskListViewController {
-    // Edit task
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         let task = tasks[indexPath.row]
@@ -100,7 +97,6 @@ extension TaskListViewController {
         }
     }
     
-    // Delete task
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         let task = tasks[indexPath.row]
         
